@@ -1,0 +1,16 @@
+import { chromium } from '@playwright/test'
+import { mkdir } from 'node:fs/promises'
+const output=new URL('../screenshots/',import.meta.url)
+await mkdir(output,{recursive:true})
+const browser=await chromium.launch({headless:true})
+const page=await browser.newPage({viewport:{width:1536,height:1024},deviceScaleFactor:1})
+await page.goto('http://127.0.0.1:4173/',{waitUntil:'networkidle'})
+await page.screenshot({path:new URL('01-storefront-desktop.png',output).pathname.slice(1)})
+await page.goto('http://127.0.0.1:4173/products/arco-01',{waitUntil:'networkidle'})
+await page.screenshot({path:new URL('02-product-desktop.png',output).pathname.slice(1)})
+await page.goto('http://127.0.0.1:4173/checkout',{waitUntil:'networkidle'})
+await page.screenshot({path:new URL('03-checkout-desktop.png',output).pathname.slice(1)})
+const mobile=await browser.newPage({viewport:{width:390,height:844},deviceScaleFactor:1})
+await mobile.goto('http://127.0.0.1:4173/',{waitUntil:'networkidle'})
+await mobile.screenshot({path:new URL('04-storefront-mobile.png',output).pathname.slice(1)})
+await browser.close()

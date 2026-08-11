@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Legacy checkout accessibility fixture</title>
+    <style>
+      body { margin: 0; background: #fff; color: #aaa; font: 14px Arial, sans-serif; }
+      .shell { width: 760px; margin: 40px auto; }
+      .close { float: right; width: 24px; height: 24px; background: transparent; border: 0; }
+      input, select { width: 100%; margin: 8px 0; padding: 8px; }
+      .columns { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+      .continue { margin-top: 20px; padding: 10px 20px; background: #d9d9d9; color: #b7b7b7; }
+    </style>
+  </head>
+  <body>
+    <main class="shell">
+      <button class="close"><svg viewBox="0 0 20 20"><path d="M3 3l14 14M17 3 3 17" /></svg></button>
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='80'%3E%3Crect width='120' height='80' fill='%23ddd'/%3E%3C/svg%3E" />
+      <h1>Checkout</h1>
+      <h3>Delivery details</h3>
+      <input type="email" placeholder="Email" />
+      <div class="columns">
+        <input type="text" placeholder="First name" />
+        <input type="text" placeholder="Last name" />
+      </div>
+      <input type="text" placeholder="Street address" />
+      <div class="columns">
+        <input type="text" placeholder="Postal code" />
+        <select><option>Italy</option><option>France</option></select>
+      </div>
+      <p class="error">Invalid value</p>
+      <div class="continue" role="button">Continue</div>
+      <a href="/"></a>
+    </main>
+  </body>
+</html>
