@@ -82,6 +82,7 @@ Original high-resolution PNGs remain in `design/source-assets/`. Optimized WebP 
 - [Portfolio case study](docs/CASE_STUDY.md)
 - [Accessibility audit](docs/ACCESSIBILITY_AUDIT.md)
 - [Manual QA plan](docs/MANUAL_QA_PLAN.md)
+- [Product Rescue evidence capsule](docs/EVIDENCE_CAPSULE_PRODUCT_RESCUE.md)
 - [Contra-ready project copy](docs/CONTRA_PROJECT_COPY.md)
 - [Visual fidelity ledger](docs/FIDELITY_LEDGER.md)
 - [Image-generation prompts](design/IMAGEGEN_PROMPTS.md)
